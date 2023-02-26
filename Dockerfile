@@ -11,6 +11,7 @@ RUN apt-get -qq -y update && \
 
 EXPOSE 8000
 VOLUME ["/config", "/var/log/icecast2", "/etc/icecast2"]
+COPY assets /usr/share/icecast2/web/assets
 
 USER icecast2
 CMD icecast2 -n -c /etc/icecast2/icecast.xml
