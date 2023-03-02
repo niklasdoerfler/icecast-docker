@@ -3,7 +3,7 @@ FROM ubuntu:jammy
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get -qq -y update && \
-    apt-get -qq -y install icecast2 && \
+    apt-get -qq -y install icecast2 curl && \
     apt-get -y autoclean && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
